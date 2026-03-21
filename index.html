@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | CS Student</title>
+  <link rel="stylesheet" href="style.css"/>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">Drishti Jain</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#hackathons" class="nav-link">Hackathons</a></li>
+      <li><a href="#opensource" class="nav-link">Open Source</a></li>
+      <li><a href="#youtube" class="nav-link">YouTube</a></li>
+      <li><a href="#interests" class="nav-link">Interests</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        <span>Available for Opportunities</span>
+      </div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text" id="typedName">Drishti Jain</span>
+      </h1>
+      <div class="hero-subtitle">
+        <span class="typed-text" id="typedRole"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        Computer Science student passionate about building things that matter.
+        I write code, explore history, and occasionally break things (on purpose).
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="resume.pdf" download class="btn btn-secondary">
+          <i class="fas fa-download"></i>
+          <span>Download Resume</span>
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/DrishtiJain-TheDeveloper" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/drishtijain73/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/itss_me_drishtii/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@code_with_drish" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="window-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="window-title">portfolio.js</span>
+        </div>
+        <div class="code-content" id="codeContent"></div>
+      <!-- </div>
+      <div class="floating-badge badge-1"><i class="fab fa-python"></i> Python</div>
+      <div class="floating-badge badge-2"><i class="fab fa-react"></i> React</div>
+      <div class="floating-badge badge-3"><i class="fas fa-database"></i> SQL</div>
+      <div class="floating-badge badge-4"><i class="fab fa-java"></i> Java</div>
+    </div> -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01. About</span>
+        <h2 class="section-title">Who Am I?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="about-img-placeholder">
+            <div class="img-glow"></div>
+            <img src="photo.jpeg" alt="Profile Photo" class="profile-photo"/>
+            <div class="img-ring ring-1"></div>
+            <div class="img-ring ring-2"></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card"><span class="stat-num" data-target="10">0</span><span class="stat-label">Projects</span></div>
+            <div class="stat-card"><span class="stat-num" data-target="5">0</span><span class="stat-label">Hackathons</span></div>
+            <div class="stat-card"><span class="stat-num" data-target="3">0</span><span class="stat-label">Internships</span></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>I'm a Computer Science student with a deep love for problem-solving and building impactful software. When I'm not coding, you'll find me down a rabbit hole of ancient history — especially Egyptian civilization, mummies, and the mysteries of the ancient world.</p>
+          <p>I recently started a <strong>YouTube channel</strong> where I share educational content on coding, DSA, and tech concepts. It's early days, but the journey has just begun.</p>
+          <p>I'm also fascinated by Indian history, world cultures, monuments, and the stories that shaped civilizations. History and code — two ways of understanding how the world works.</p>
+          <div class="about-interests">
+            <span class="interest-tag"><i class="fas fa-code"></i> Coding</span>
+            <span class="interest-tag"><i class="fas fa-scroll"></i> Ancient History</span>
+            <span class="interest-tag"><i class="fas fa-ankh"></i> Egyptian Culture</span>
+            <span class="interest-tag"><i class="fab fa-youtube"></i> YouTube Creator</span>
+            <span class="interest-tag"><i class="fas fa-landmark"></i> Indian History</span>
+            <span class="interest-tag"><i class="fas fa-globe"></i> World Cultures</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section section-dark" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02. Education</span>
+        <h2 class="section-title">Academic Journey</h2>
+      </div>
+      <div class="education-timeline">
+
+        <div class="edu-card edu-card--main">
+          <div class="edu-card-left">
+            <div class="edu-icon"><i class="fas fa-university"></i></div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-card-body">
+            <div class="edu-badge">Current</div>
+            <h3>Bachelor of Technology — Computer Science & Engineering</h3>
+            <span class="edu-institute">Lovely Professional University</span>
+            <div class="edu-meta">
+              <span><i class="fas fa-calendar-alt"></i> 2023 – Present</span>
+              <span><i class="fas fa-map-marker-alt"></i> Phagwara, Punjab</span>
+              <span class="edu-cgpa"><i class="fas fa-star"></i> CGPA: 8.68</span>
+            </div>
+            <p class="edu-desc">Studying core CS subjects including Data Structures, Algorithms, Operating Systems, DBMS, Computer Networks, and Software Engineering. Actively involved in coding clubs, hackathons, and open source.</p>
+            <!-- <div class="edu-highlights">
+              <div class="edu-highlight-item"><i class="fas fa-trophy"></i> Department Rank: Top 10%</div>
+              <div class="edu-highlight-item"><i class="fas fa-users"></i> Coding Club Member</div>
+              <div class="edu-highlight-item"><i class="fas fa-flask"></i> Research Intern — CS Lab</div>
+            </div> -->
+            <div class="edu-courses">
+              <span class="edu-course-label">Key Courses:</span>
+              <span>DSA</span><span>OS</span><span>DBMS</span><span>CN</span><span>ML</span><span>Software Engg.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-card-left">
+            <div class="edu-icon edu-icon--sm"><i class="fas fa-school"></i></div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-card-body">
+            <h3>Class XII — Science (PCM + CS)</h3>
+            <span class="edu-institute">Vardhman Academy Radha Graden</span>
+            <div class="edu-meta">
+              <span><i class="fas fa-calendar-alt"></i> 2020 – 2022</span>
+              <span><i class="fas fa-map-marker-alt"></i> Meerut, Uttar Pradesh</span>
+              <span class="edu-cgpa"><i class="fas fa-star"></i> Percentage: 88.9%</span>
+            </div>
+            <div class="edu-courses">
+              <span class="edu-course-label">Subjects:</span>
+              <span>Physics</span><span>Chemistry</span><span>Maths</span><span>Chemistry</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-card-left">
+            <div class="edu-icon edu-icon--sm"><i class="fas fa-book"></i></div>
+          </div>
+          <div class="edu-card-body">
+            <h3>Class X — CBSE</h3>
+            <span class="edu-institute">De Montford Academy</span>
+            <div class="edu-meta">
+              <span><i class="fas fa-calendar-alt"></i> 2020</span>
+              <span class="edu-cgpa"><i class="fas fa-star"></i> Percentage: 92%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03. Skills</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+      <div class="skills-tabs">
+        <button class="skill-tab active" data-tab="languages">Languages & Web Technologies</button>
+        <button class="skill-tab" data-tab="devops">DevOps and Monitoring</button>
+        <button class="skill-tab" data-tab="cloud">Cloud and OS</button>
+        <!-- <button class="skill-tab" data-tab="tools">Tools & Platforms</button> -->
+        <button class="skill-tab" data-tab="tools">Tools & Platforms</button>
+        <button class="skill-tab" data-tab="cs">CS Fundamentals</button>
+      </div>
+      <div class="skills-content">
+        <div class="skill-panel active" id="tab-languages">
+          <div class="skill-grid">
+            <div class="skill-card" data-level="90"><div class="skill-icon"><i class="fab fa-java"></i></div><span>Java</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+            <div class="skill-card" data-level="85"><div class="skill-icon"><i class="fab fa-python"></i></div><span>Python</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+            <div class="skill-card" data-level="80"><div class="skill-icon"><i class="fas fa-copyright"></i></div><span>C/C++</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+            <div class="skill-card" data-level="70"><div class="skill-icon"><i class="fab fa-html5"></i></div><span>HTML</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+            <div class="skill-card" data-level="70"><div class="skill-icon"><i class="fab fa-css3-alt"></i></div><span>CSS</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+            <div class="skill-card" data-level="70"><div class="skill-icon"><i class="fab fa-js"></i></div><span>JavaScript</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-panel" id="tab-devops">
+          <div class="skill-grid">
+            <div class="skill-card" data-level="80"><div class="skill-icon"><i class="fab fa-docker"></i></div><span>Docker</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+            <div class="skill-card" data-level="75"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"></i></div><span>Kubernetes</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+            <div class="skill-card" data-level="70"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" width="30"></div><span>Grafana</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+            <div class="skill-card" data-level="65"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" width="30"></div><span>Prometheus</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-panel" id="tab-cloud">
+          <div class="skill-grid">
+            <div class="skill-card" data-level="80"><div class="skill-icon"><i class="fab fa-aws"></i></div><span>Docker</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+            <div class="skill-card" data-level="75"><div class="skill-icon"><i class="fab fa-linux"></i></div><span>Linux</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+            <div class="skill-card" data-level="70"><div class="skill-icon"><i class="fab fa-windows"></i></div><span>Windows</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+            <div class="skill-card" data-level="65"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"></div><span>Shell Scripting</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-panel" id="tab-tools">
+          <div class="skill-grid">
+            <div class="skill-card" data-level="85"><div class="skill-icon"><i class="fab fa-git-alt"></i></div><span>Git</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+            <div class="skill-card" data-level="75"><div class="skill-icon"><i class="fab fa-github"></i></div><span>Github</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+            <div class="skill-card" data-level="70"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div><span>SQL</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+            <div class="skill-card" data-level="65"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"></div><span>VS Code</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-panel" id="tab-cs">
+          <div class="skill-grid">
+            <div class="skill-card" data-level="90"><div class="skill-icon"><i class="fas fa-sitemap"></i></div><span>DSA</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+            <div class="skill-card" data-level="80"><div class="skill-icon"><i class="fas fa-network-wired"></i></div><span>OS & Networks</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+            <div class="skill-card" data-level="75"><div class="skill-icon"><i class="fas fa-table"></i></div><span>DBMS</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+            <div class="skill-card" data-level="70"><div class="skill-icon"><i class="fas fa-object-group"></i></div><span>OOP</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04. Projects</span>
+        <h2 class="section-title">Things I've Built</h2>
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ml">AI</button>
+        <button class="filter-btn" data-filter="java">JAVA</button>
+        
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <div class="project-card" data-category="java">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/DrishtiJain-TheDeveloper/PuzzleGamePro" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://puzzlegamepro.onrender.com" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">PuzzleGamePro</h3>
+          <p class="project-desc">A fully interactive browser-based puzzle game built where players can choose from multiple difficulty levels and solve sliding puzzles using various images.The game is fully responsive, visually engaging, and designed to provide a fun, brain-challenging experience for all ages.
+          </p></p>
+          <div class="project-tags"><span>Java</span><span>OOPS</span><span>Swing/AWT</span><span>HTML5</span><span>CSS</span><span>JAVASCRIPT</span></div>
+        </div>
+        <div class="project-card featured" data-category="ml">
+          <!-- <div class="project-featured-label">Featured</div> -->
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/DrishtiJain-TheDeveloper/SafetyTrainingPro_Chatbot" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://safetytrainingpro-chatbot.onrender.com" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">SafetyTrainingPro</h3>
+          <p class="project-desc">Developed and deployed an AI-powered Safety Training Chatbot using Flask and Gemini API, capable of providing real-time safety guidance. Integrated backend APIs and hosted the application on cloud infrastructure.</p>
+          <div class="project-tags"><span>Python</span><span>Flask</span><span>APIs</span><span>HTML5</span><span>CSS</span><span>JAVASCRIPT</span></div>
+        </div>
+        <div class="project-card" data-category="java">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="project-links">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Secure File Management System</h3>
+          <p class="project-desc">Developed a secure file management system in Java that allows users to store, access, and manage files with controlled access. Implemented authentication mechanisms and structured file handling to ensure data security and efficient file operations.</p>
+          <div class="project-tags"><span>Java</span><span>File Handling</span><span>security</span><span>OOPS</span></div>
+        </div>
+        <div class="project-card" data-category="web">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/DrishtiJain-TheDeveloper/Recipe-Meal-Planner-and-Grocery-List-Generator" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://recipe-meal-planner-and-grocery-list.onrender.com" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Recipe Meal Planner And Grocery List Generator</h3>
+          <p class="project-desc">A web-based application that helps users plan meals for the week and automatically generates a grocery list based on selected recipes. Includes dynamic UI, user-friendly interaction, and efficient data handling for personalized meal planning.</p>
+          <div class="project-tags"><span>HTML5</span><span>CSS</span><span>JAVASCRIPT</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section section-dark" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05. Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Trainee</h3>
+              <span class="timeline-company">Continental Pvt. Lmt.</span>
+            </div>
+            <span class="timeline-date"><i class="fas fa-calendar"></i> Jun 2025 – Aug 2025</span>
+            <ul class="timeline-points">
+              <li>Developed and maintained RESTful APIs serving 10k+ daily requests</li>
+              <li>Collaborated with cross-functional teams using Agile methodology</li>
+              <li>Improved query performance by 40% through database optimization</li>
+            </ul>
+            <div class="timeline-tags"><span>Python</span><span>Django</span><span>PostgreSQL</span></div>
+          </div>
+        </div>
+        <!-- <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Web Development Intern</h3>
+              <span class="timeline-company">Another Company</span>
+            </div>
+            <span class="timeline-date"><i class="fas fa-calendar"></i> Dec 2023 – Feb 2024</span>
+            <ul class="timeline-points">
+              <li>Built responsive UI components using React and Tailwind CSS</li>
+              <li>Integrated third-party APIs and payment gateways</li>
+              <li>Wrote unit tests achieving 85% code coverage</li>
+            </ul>
+            <div class="timeline-tags"><span>React</span><span>JavaScript</span><span>CSS</span></div>
+          </div>
+        </div> -->
+        <!-- <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Research Intern</h3>
+              <span class="timeline-company">University Lab</span>
+            </div>
+            <span class="timeline-date"><i class="fas fa-calendar"></i> May 2023 – Jul 2023</span>
+            <ul class="timeline-points">
+              <li>Assisted in NLP research on sentiment analysis models</li>
+              <li>Preprocessed and analyzed large datasets using Python</li>
+              <li>Co-authored a paper submitted to a national conference</li>
+            </ul>
+            <div class="timeline-tags"><span>Python</span><span>NLP</span><span>Research</span></div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06. Certifications</span>
+        <h2 class="section-title">Courses & Certs</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-logo"><i class="fab fa-aws"></i></div>
+          <div class="cert-info">
+            <h3>AWS Cloud Practitioner</h3>
+            <span class="cert-issuer">Amazon Web Services</span>
+            <span class="cert-date">2024</span>
+          </div>
+          <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo"><img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" alt="LPU"></div>
+          <div class="cert-info">
+            <h3>Mastering Java for Application Development </h3>
+            <span class="cert-issuer">LPU</span>
+            <span class="cert-date">2025</span>
+          </div>
+          <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo"><img src="https://upload.wikimedia.org/wikipedia/en/1/1c/IIT_Kharagpur_Logo.svg" alt="IIT KGP"></div>
+          <div class="cert-info">
+            <h3>Privacy and security in Online Social Media</h3>
+            <span class="cert-issuer">IIT Kharagpur / NPTEL</span>
+            <span class="cert-date">2025</span>
+          </div>
+          <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo"><i class="fas fa-code"></i></div>
+          <div class="cert-info">
+            <h3>Object Oriented Programming</h3>
+            <span class="cert-issuer">NeoColab</span>
+            <span class="cert-date">2023</span>
+          </div>
+          <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo"><i class="fas fa-code"></i></div>
+          <div class="cert-info">
+            <h3>Data Structures & Algorithms</h3>
+            <span class="cert-issuer">NeoColab</span>
+            <span class="cert-date">2024</span>
+          </div>
+          <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo"><i class="fab fa-python"></i></div>
+          <div class="cert-info">
+            <h3>Python for Everybody</h3>
+            <span class="cert-issuer">University of Michigan</span>
+            <span class="cert-date">2022</span>
+          </div>
+          <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hackathons Section -->
+  <section class="section section-dark" id="hackathons">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">07. Hackathons</span>
+        <h2 class="section-title">Hack the Planet</h2>
+      </div>
+      <div class="hackathons-grid">
+        <!-- <div class="hackathon-card">
+          <div class="hackathon-rank rank-1"><i class="fas fa-trophy"></i> 1st Place</div>
+          <h3>HackFest 2024</h3>
+          <p class="hack-org">National Level · 500+ Teams</p>
+          <p class="hack-desc">Built an AI-powered accessibility tool for visually impaired users. Won best innovation award.</p>
+          <div class="hack-tags"><span>Python</span><span>OpenCV</span><span>TTS</span></div>
+        </div> -->
+        <div class="hackathon-card">
+          <div class="hackathon-rank rank-part"><i class="fas fa-star"></i> Participant</div>
+          <h3>Adobe India Hackathon</h3>
+          <p class="hack-org">National Level · Online</p>
+          <p class="hack-desc">Built a climate change data visualization tool with interactive maps and trend analysis.</p>
+          <div class="hack-tags"><span>HTML5</span><span>CSS</span><span>APIs</span><span>Javascript</span></div>
+        </div>
+        <div class="hackathon-card">
+          <div class="hackathon-rank rank-part"><i class="fas fa-star"></i> Participant</div>
+          <h3>HP Power Lab 2.0</h3>
+          <p class="hack-org">Inter-University · Online</p>
+          <p class="hack-desc">Built a climate change data visualization tool with interactive maps and trend analysis.</p>
+          <div class="hack-tags"><span>DSA</span><span>CSS</span><span>APIs</span><span>Javascript</span></div>
+        </div>
+        <!-- <div class="hackathon-card">
+          <div class="hackathon-rank rank-2"><i class="fas fa-medal"></i> Runner Up</div>
+          <h3>Smart India Hackathon</h3>
+          <p class="hack-org">Government of India · 1000+ Teams</p>
+          <p class="hack-desc">Developed a smart waste management system using IoT sensors and real-time dashboards.</p>
+          <div class="hack-tags"><span>IoT</span><span>React</span><span>Firebase</span></div>
+        </div> -->
+        <!-- <div class="hackathon-card">
+          <div class="hackathon-rank rank-3"><i class="fas fa-award"></i> Top 10</div>
+          <h3>CodeStorm 2023</h3>
+          <p class="hack-org">College Level · 200+ Teams</p>
+          <p class="hack-desc">Created a peer-to-peer learning platform connecting students with mentors in real-time.</p>
+          <div class="hack-tags"><span>Node.js</span><span>Socket.io</span><span>MongoDB</span></div>
+        </div> -->
+        <div class="hackathon-card">
+          <div class="hackathon-rank rank-part"><i class="fas fa-star"></i> Participant</div>
+          <h3>Code -A -Haunt</h3>
+          <p class="hack-org">Inter-University · Offline</p>
+          <p class="hack-desc">Built a climate change data visualization tool with interactive maps and trend analysis.</p>
+          <div class="hack-tags"><span>HTML5</span><span>CSS</span><span>APIs</span><span>Javascript</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source Section -->
+  <section class="section" id="opensource">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">08. Open Source</span>
+        <h2 class="section-title">Giving Back to the Community</h2>
+      </div>
+      <div class="os-intro">
+        <div class="os-intro-card">
+          <i class="fab fa-github os-big-icon"></i>
+          <p>Open source is where I learn the most. Contributing to real-world codebases has sharpened my skills and connected me with developers worldwide.</p>
+        </div>
+      </div>
+      <div class="os-grid">
+        <div class="os-card">
+          <div class="os-card-header">
+            <i class="fab fa-github"></i>
+            <span class="os-repo">DrishtiJain-TheDeveloper/PuzzleGamePro</span>
+            <span class="os-stars"><i class="fas fa-star"></i> 2.4k</span>
+          </div>
+          <h3>Built Puzzle Game Pro Web Version</h3>
+          <p>Developed a browser-based interactive sliding puzzle game with multiple difficulty levels, timer tracking, shuffle/reset functionality, image previews, and immersive sound effects. Fully responsive and open for community enhancements.</p>
+          <div class="os-meta">
+            <span class="os-tag merged"><i class="fas fa-code-merge"></i> Merged</span>
+            <span class="os-lang">Java</span>
+          </div>
+        </div>
+        <div class="os-card">
+          <div class="os-card-header">
+            <i class="fab fa-github"></i>
+            <span class="os-repo">DrishtiJain-TheDeveloper/SafetyTrainingPro</span>
+            <span class="os-stars"><i class="fas fa-star"></i> 890</span>
+          </div>
+          <h3>Built Web based AI-Powered Safety Chatbott</h3>
+          <p>Implemented system-aware dark mode with smooth transitions and user preference persistence using localStorage.</p>
+          <div class="os-meta">
+            <span class="os-tag merged"><i class="fas fa-code-merge"></i> Merged</span>
+            <span class="os-lang">Python/HTML5/CSS/JavaScript</span>
+          </div>
+        </div>
+        <div class="os-card">
+          <div class="os-card-header">
+            <i class="fab fa-github"></i>
+            <span class="os-repo">DrishtiJain-TheDeveloper/RecipeMealPlanner</span>
+            <span class="os-stars"><i class="fas fa-star"></i> 1.1k</span>
+          </div>
+          <h3>Feature: Meal Planning & Grocery List Generator</h3>
+          <p>Developed a web app to plan meals and generate grocery lists with REST API integration, authentication, and rate limiting. Includes dynamic ingredient suggestions and cloud-ready deployment.</p>
+          <div class="os-meta">
+            <span class="os-tag merged"><i class="fas fa-code-merge"></i> Merged</span>
+            <span class="os-lang">Markdown</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Section -->
+  <section class="section section-dark" id="youtube">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">09. YouTube</span>
+        <h2 class="section-title">My Channel</h2>
+      </div>
+      <div class="yt-showcase">
+        <div class="yt-channel-card">
+          <div class="yt-logo-wrap">
+            <i class="fab fa-youtube yt-icon"></i>
+          </div>
+          <div class="yt-channel-info">
+            <h3>code_with_drish</h3>
+            <p class="yt-handle">@code_with_drish</p>
+            <div class="yt-stats">
+              <div class="yt-stat"><span class="yt-num">New</span><span>Channel</span></div>
+              <div class="yt-stat"><span class="yt-num">Growing</span><span>Community</span></div>
+              <div class="yt-stat"><span class="yt-num">Weekly</span><span>Uploads</span></div>
+            </div>
+            <p class="yt-desc">I create educational content on coding, DSA, and computer science concepts. Just getting started — every subscriber means the world to me!</p>
+            <a href="https://www.youtube.com/@code_with_drish" class="btn btn-yt" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-youtube"></i> Visit Channel
+            </a>
+          </div>
+        </div>
+        <div class="yt-videos">
+          <div class="yt-video-card">
+            <div class="yt-thumb"><i class="fas fa-play-circle"></i><span>DSA</span></div>
+            <div class="yt-video-info">
+              <h4>Strings and StringBuilder in JAVA</h4>
+              <span class="yt-views"><i class="fas fa-eye"></i> Recent Upload</span>
+            </div>
+          </div>
+          <div class="yt-video-card">
+            <div class="yt-thumb"><i class="fas fa-play-circle"></i><span>Python</span></div>
+            <div class="yt-video-info">
+              <h4>Python Tips Every Beginner Should Know</h4>
+              <span class="yt-views"><i class="fas fa-eye"></i> Recent Upload</span>
+            </div>
+          </div>
+          <div class="yt-video-card">
+            <div class="yt-thumb"><i class="fas fa-play-circle"></i><span>CS</span></div>
+            <div class="yt-video-info">
+              <h4>How the Internet Actually Works</h4>
+              <span class="yt-views"><i class="fas fa-eye"></i> Recent Upload</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beyond Code / Interests Section -->
+  <!-- <section class="section" id="interests">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">10. Beyond Code</span>
+        <h2 class="section-title">Life Outside the Terminal</h2>
+        <p class="section-sub">Not everything I love ends up on GitHub. Some passions live in books, documentaries, and late-night rabbit holes.</p>
+      </div>
+      <div class="interests-hero">
+        <div class="interest-main-card egypt-card">
+          <div class="interest-main-bg"></div>
+          <div class="interest-main-content">
+            <div class="interest-main-icon">𓂀</div>
+            <div class="interest-main-badge">Deep Passion</div>
+            <h3>Ancient Egyptian Civilization</h3>
+            <p>Mummies, pharaohs, hieroglyphs, and the mysteries of the pyramids — a subject I deeply enjoy exploring. I spend time studying burial practices, the Book of the Dead, and ancient Egyptian beliefs about the afterlife. This interest reflects my curiosity toward how science, religion, and art intersected in one of the world’s oldest civilizations.</p>
+            <div class="interest-topics">
+              <span><i class="fas fa-ankh"></i> Mummies & Mummification</span>
+              <span><i class="fas fa-monument"></i> Pyramids & Temples</span>
+              <span><i class="fas fa-scroll"></i> Hieroglyphs</span>
+              <span><i class="fas fa-star-and-crescent"></i> Egyptian Mythology</span>
+              <span><i class="fas fa-book-dead"></i> Book of the Dead</span>
+            </div>
+            <p class="interest-note"><i class="fas fa-info-circle"></i>I actively explore this interest through documentaries, books, and research-based content.</p>
+            <p class="interest-sub">Inspired by documentaries like <i>Secrets of the Saqqara Tomb</i>, <i>Immortal Egypt</i>, and <i>Mummies: Secrets of the Pharaohs</i>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="interests-grid">
+        <div class="interest-card">
+          <div class="interest-card-icon"><i class="fas fa-om"></i></div>
+          <h3>Indian History</h3>
+          <p>From the Indus Valley Civilization to the Mughal Empire and the freedom struggle — Indian history is layered, complex, and endlessly fascinating. I love reading about ancient kingdoms, architecture, and the cultural evolution across millennia.</p>
+          <div class="interest-subtopics">
+            <span>Indus Valley</span>
+            <span>Mughal Era</span>
+            <span>Ancient Temples</span>
+            <span>Freedom Movement</span>
+          </div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-card-icon"><i class="fas fa-globe-asia"></i></div>
+          <h3>World Cultures & Monuments</h3>
+          <p>Every culture has a story. I'm drawn to how different civilizations — Mesopotamian, Greek, Roman, Mayan — built their worlds, their beliefs, and their monuments. Architecture as a window into a civilization's soul.</p>
+          <div class="interest-subtopics">
+            <span>Mesopotamia</span>
+            <span>Greek & Roman</span>
+            <span>Mayan Civilization</span>
+            <span>World Monuments</span>
+          </div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-card-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <h3>Cultures & Traditions</h3>
+          <p>Different countries, different rituals, different ways of seeing the world. I love exploring how geography, religion, and history shape the identity of a people — from Japanese traditions to African kingdoms to South American civilizations.</p>
+          <div class="interest-subtopics">
+            <span>Japanese Culture</span>
+            <span>African Kingdoms</span>
+            <span>Folklore & Myths</span>
+            <span>Ancient Rituals</span>
+          </div>
+        </div>
+      </div>
+      <div class="interests-quote">
+        <i class="fas fa-quote-left"></i>
+        <blockquote>"The more you know about the past, the better prepared you are for the future."</blockquote>
+        <cite>— Theodore Roosevelt</cite>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Contact Section -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">11. Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-sub">I'm actively looking for placement opportunities. Whether it's a job, internship, or just a chat — my inbox is open.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div><span class="contact-label">Email</span><a href="mailto:drishtijain758@gmail.com">drishtijain758@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/drishtijain73/">linkedin.com/in/drishtijain73</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div><span class="contact-label">GitHub</span><a href="https://github.com/DrishtiJain-TheDeveloper">github.com/DrishtiJain-TheDeveloper</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><span class="contact-label">Location</span><span>Meerut, India</span></div>
+          </div>
+          <a href="resume.pdf" download class="btn btn-primary resume-btn">
+            <i class="fas fa-file-pdf"></i> Download Resume (PDF)
+          </a>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" placeholder=" " required autocomplete="name"/>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder=" " required autocomplete="email"/>
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" placeholder=" " required/>
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder=" " required></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Drishti Jain</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-text">Designed & Built with <i class="fas fa-heart" style="color:#e25555"></i> by Your Name</p>
+      <p class="footer-sub">CS Student · Coder · History Enthusiast · YouTuber</p>
+      <div class="footer-socials">
+        <a href="https://github.com/DrishtiJain-TheDeveloper" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/drishtijain73/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@code_with_drish" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/itss_me_drishtii/" aria-label="Twitter"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

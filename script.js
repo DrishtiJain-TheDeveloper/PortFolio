@@ -406,6 +406,21 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   }, 1500);
 });
 
+// ===== FORCE RESUME DOWNLOAD =====
+function forceDownload(e) {
+  e.preventDefault();
+  const a = document.createElement('a');
+  a.href = 'resume.pdf';
+  a.download = 'Resume.pdf';
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+document.getElementById('resumeBtn1').addEventListener('click', forceDownload);
+document.getElementById('resumeBtn2').addEventListener('click', forceDownload);
+
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

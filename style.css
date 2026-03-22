@@ -864,3 +864,11 @@ ul { list-style: none; }
   body { cursor: auto; }
   .btn, .skill-tab, .filter-btn, .hamburger { cursor: pointer; }
 }
+.cert-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+}

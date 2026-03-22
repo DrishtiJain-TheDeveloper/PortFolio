@@ -258,7 +258,7 @@ function updateActiveNav() {
 }
 
 // ===== TYPED ROLE =====
-const roles = ['Full Stack Developer', 'Problem Solver', 'CS Student', 'Open Source Contributor', 'History Enthusiast', 'YouTuber'];
+const roles = ['Cloud Engineer', 'DevOps Engineer', 'Problem Solver', 'Open Source Contributor'];
 let roleIdx = 0, charIdx = 0, deleting = false;
 const typedEl = document.getElementById('typedRole');
 
@@ -278,14 +278,14 @@ typeRole();
 // ===== CODE WINDOW ANIMATION =====
 const codeLines = [
   '<span class="c-keyword">const</span> <span class="c-var">developer</span> = <span class="c-bracket">{</span>',
-  '  <span class="c-prop">name</span>: <span class="c-string">"Your Name"</span>,',
+  '  <span class="c-prop">name</span>: <span class="c-string">"Drishti Jain"</span>,',
   '  <span class="c-prop">role</span>: <span class="c-string">"CS Student"</span>,',
-  '  <span class="c-prop">skills</span>: <span class="c-bracket">[</span><span class="c-string">"Python"</span>, <span class="c-string">"React"</span><span class="c-bracket">]</span>,',
+  '  <span class="c-prop">skills</span>: <span class="c-bracket">[</span><span class="c-string">"Python"</span>, <span class="c-string">"Java"</span><span class="c-bracket">]</span>,',
   '  <span class="c-prop">passions</span>: <span class="c-bracket">[</span>',
   '    <span class="c-string">"Coding"</span>, <span class="c-string">"History"</span>,',
   '    <span class="c-string">"Egyptian Culture"</span>',
   '  <span class="c-bracket">]</span>,',
-  '  <span class="c-prop">youtube</span>: <span class="c-string">"@yourhandle"</span>,',
+  '  <span class="c-prop">youtube</span>: <span class="c-string">"@code_with_drish"</span>,',
   '  <span class="c-prop">openToWork</span>: <span class="c-keyword">true</span>',
   '<span class="c-bracket">}</span>',
   '',

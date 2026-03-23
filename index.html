@@ -714,52 +714,123 @@
         <p class="section-sub">I'm actively looking for placement opportunities. Whether it's a job, internship, or just a chat — my inbox is open.</p>
       </div>
       <div class="contact-grid">
+
+        <!-- Left: Info -->
         <div class="contact-info">
+          <div class="contact-availability">
+            <span class="avail-dot"></span>
+            <span>Available for full-time roles & internships</span>
+          </div>
+          <p class="contact-intro">Feel free to reach out — I respond within 24 hours. Whether it's a job opportunity, collaboration, or just a hello, I'd love to hear from you.</p>
+
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-            <div><span class="contact-label">Email</span><a href="mailto:drishtijain758@gmail.com">drishtijain758@gmail.com</a></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:drishtijain758@gmail.com">drishtijain758@gmail.com</a>
+            </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-            <div><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/drishtijain73/">linkedin.com/in/drishtijain73</a></div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/drishtijain73/" target="_blank" rel="noopener noreferrer">linkedin.com/in/drishtijain73</a>
+            </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fab fa-github"></i></div>
-            <div><span class="contact-label">GitHub</span><a href="https://github.com/DrishtiJain-TheDeveloper">github.com/DrishtiJain-TheDeveloper</a></div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/DrishtiJain-TheDeveloper" target="_blank" rel="noopener noreferrer">DrishtiJain-TheDeveloper</a>
+            </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div><span class="contact-label">Location</span><span>Meerut, India</span></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span>Meerut, India</span>
+            </div>
           </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <span class="contact-label">Response Time</span>
+              <span>Within 24 hours</span>
+            </div>
+          </div>
+
+          <div class="contact-divider"></div>
+
+          <div class="contact-social-row">
+            <a href="https://www.linkedin.com/in/drishtijain73/" target="_blank" rel="noopener noreferrer" class="contact-social-btn linkedin" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/DrishtiJain-TheDeveloper" target="_blank" rel="noopener noreferrer" class="contact-social-btn github" aria-label="GitHub">
+              <i class="fab fa-github"></i><span>GitHub</span>
+            </a>
+            <a href="mailto:drishtijain758@gmail.com" class="contact-social-btn gmail" aria-label="Email">
+              <i class="fas fa-envelope"></i><span>Email</span>
+            </a>
+          </div>
+
           <a href="resume.pdf" download="Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary resume-btn" id="resumeBtn2">
             <i class="fas fa-file-pdf"></i> Download Resume (PDF)
           </a>
         </div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <input type="text" id="name" placeholder=" " required autocomplete="name"/>
-            <label for="name">Your Name</label>
+
+        <!-- Right: Email CTA -->
+        <div class="contact-form-wrap">
+          <div class="form-header">
+            <h3>Send a Message</h3>
+            <p>Click below to open your email client — I'll receive it directly in my inbox.</p>
           </div>
-          <div class="form-group">
-            <input type="email" id="email" placeholder=" " required autocomplete="email"/>
-            <label for="email">Your Email</label>
+          <div class="email-cta">
+            <div class="email-preview">
+              <div class="email-preview-bar">
+                <span class="ep-dot red"></span>
+                <span class="ep-dot yellow"></span>
+                <span class="ep-dot green"></span>
+                <span class="ep-title">New Email</span>
+              </div>
+              <div class="email-preview-body">
+                <div class="ep-field"><span class="ep-label">To:</span><span class="ep-value">drishtijain758@gmail.com</span></div>
+                <div class="ep-field"><span class="ep-label">Subject:</span><span class="ep-value" id="epSubject">Opportunity for Drishti Jain</span></div>
+                <div class="ep-field ep-field--msg"><span class="ep-label">Message:</span><span class="ep-value ep-placeholder">Hi Drishti, I came across your portfolio...</span></div>
+              </div>
+            </div>
+
+            <div class="email-purpose-select">
+              <p class="purpose-label">What's this about?</p>
+              <div class="purpose-chips">
+                <button class="purpose-chip active" data-subject="Job Opportunity — Drishti Jain">Job Opportunity</button>
+                <button class="purpose-chip" data-subject="Internship Offer — Drishti Jain">Internship</button>
+                <button class="purpose-chip" data-subject="Collaboration — Drishti Jain">Collaboration</button>
+                <button class="purpose-chip" data-subject="Open Source — Drishti Jain">Open Source</button>
+                <button class="purpose-chip" data-subject="Just saying hi!">Just saying hi</button>
+              </div>
+            </div>
+
+            <a href="mailto:drishtijain758@gmail.com?subject=Job%20Opportunity%20%E2%80%94%20Drishti%20Jain&body=Hi%20Drishti%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.%0A%0A" class="btn btn-primary email-send-btn" id="emailSendBtn">
+              <i class="fas fa-envelope"></i>
+              <span>Open Email Client</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=drishtijain758@gmail.com&su=Job%20Opportunity%20%E2%80%94%20Drishti%20Jain&body=Hi%20Drishti%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.%0A%0A" target="_blank" rel="noopener noreferrer" class="btn btn-secondary email-send-btn" id="gmailSendBtn">
+              <i class="fab fa-google"></i>
+              <span>Open in Gmail</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <div class="email-alts">
+              <span>Or reach out directly via</span>
+              <div class="email-alt-links">
+                <a href="https://www.linkedin.com/in/drishtijain73/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn DM</a>
+                <a href="https://github.com/DrishtiJain-TheDeveloper" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="text" id="subject" placeholder=" " required/>
-            <label for="subject">Subject</label>
-          </div>
-          <div class="form-group">
-            <textarea id="message" rows="5" placeholder=" " required></textarea>
-            <label for="message">Message</label>
-          </div>
-          <button type="submit" class="btn btn-primary form-submit">
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-          <div class="form-success" id="formSuccess">
-            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
-          </div>
-        </form>
+        </div>
+
       </div>
     </div>
   </section>

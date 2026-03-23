@@ -391,19 +391,18 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// ===== CONTACT FORM =====
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('.form-submit');
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
-    btn.disabled = false;
-    document.getElementById('formSuccess').classList.add('show');
-    this.reset();
-    setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 4000);
-  }, 1500);
+// ===== EMAIL PURPOSE CHIPS =====
+document.querySelectorAll('.purpose-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.purpose-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const subject = chip.dataset.subject;
+    document.getElementById('epSubject').textContent = subject;
+    const encoded = encodeURIComponent(subject);
+    const body = encodeURIComponent('Hi Drishti,\n\nI came across your portfolio and would love to connect.\n\n');
+    document.getElementById('emailSendBtn').href = `mailto:drishtijain758@gmail.com?subject=${encoded}&body=${body}`;
+    document.getElementById('gmailSendBtn').href = `https://mail.google.com/mail/?view=cm&to=drishtijain758@gmail.com&su=${encoded}&body=${body}`;
+  });
 });
 
 // ===== FORCE RESUME DOWNLOAD =====
